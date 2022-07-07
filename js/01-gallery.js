@@ -60,10 +60,14 @@ galleryList.addEventListener("click", (event) => {
 
   instance.show();
 
-  galleryList.addEventListener("keydown", (event) => {
+  galleryList.addEventListener("keydown", onKeyUp);
+
+  function onKeyUp(event) {
+    console.log(event);
     if (event.code !== "Escape") {
       return;
     }
     instance.close();
-  });
+    galleryList.removeEventListener("keydown", onKeyUp);
+  }
 });
