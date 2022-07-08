@@ -6,8 +6,8 @@ const galleryList = document.querySelector(".gallery");
 const galleryCardsArr = galleryItems
   .map(
     (el) =>
-      `<div class="gallery__item">
-        <a class="gallery__item" href="${el.original}">
+      `<li class="gallery__item">
+        <a  href="${el.original}">
             <img 
             class="gallery__image"
             src="${el.preview}"
@@ -15,7 +15,7 @@ const galleryCardsArr = galleryItems
             data-source="${el.original}"
             />
         </a>
-    </div>`
+    </li>`
   )
   .join("");
 
