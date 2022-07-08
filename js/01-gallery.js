@@ -63,7 +63,6 @@ galleryList.addEventListener("click", (event) => {
   galleryList.addEventListener("keydown", onKeyUp);
 
   function onKeyUp(event) {
-    console.log(event);
     if (event.code !== "Escape") {
       return;
     }
